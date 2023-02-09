@@ -129,116 +129,6 @@ pub static CLASSICMCELIECE8192128F: KemAlgorithm = KemAlgorithm {
     kem: oqs::kem::Algorithm::ClassicMcEliece8192128f,
 };
 
-const LIGHTSABER_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-lightsaber.der")),
-};
-
-/// lightsaber KEM
-pub static LIGHTSABER: KemAlgorithm = KemAlgorithm {
-    public_key_alg_id: LIGHTSABER_ID,
-    kem: oqs::kem::Algorithm::Lightsaber,
-};
-
-const SABER_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-saber.der")),
-};
-
-/// saber KEM
-pub static SABER: KemAlgorithm = KemAlgorithm {
-    public_key_alg_id: SABER_ID,
-    kem: oqs::kem::Algorithm::Saber,
-};
-
-const FIRESABER_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-firesaber.der")),
-};
-
-/// firesaber KEM
-pub static FIRESABER: KemAlgorithm = KemAlgorithm {
-    public_key_alg_id: FIRESABER_ID,
-    kem: oqs::kem::Algorithm::Firesaber,
-};
-
-const NTRUHPS2048509_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-ntruhps2048509.der")),
-};
-
-/// ntruhps2048509 KEM
-pub static NTRUHPS2048509: KemAlgorithm = KemAlgorithm {
-    public_key_alg_id: NTRUHPS2048509_ID,
-    kem: oqs::kem::Algorithm::NtruHps2048509,
-};
-
-const NTRUHPS2048677_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-ntruhps2048677.der")),
-};
-
-/// ntruhps2048677 KEM
-pub static NTRUHPS2048677: KemAlgorithm = KemAlgorithm {
-    public_key_alg_id: NTRUHPS2048677_ID,
-    kem: oqs::kem::Algorithm::NtruHps2048677,
-};
-
-const NTRUHPS4096821_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-ntruhps4096821.der")),
-};
-
-/// ntruhps4096821 KEM
-pub static NTRUHPS4096821: KemAlgorithm = KemAlgorithm {
-    public_key_alg_id: NTRUHPS4096821_ID,
-    kem: oqs::kem::Algorithm::NtruHps4096821,
-};
-
-const NTRUHRSS701_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-ntruhrss701.der")),
-};
-
-/// ntruhrss701 KEM
-pub static NTRUHRSS701: KemAlgorithm = KemAlgorithm {
-    public_key_alg_id: NTRUHRSS701_ID,
-    kem: oqs::kem::Algorithm::NtruHrss701,
-};
-
-const NTRUPRIMENTRULPR653_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-ntruprimentrulpr653.der")),
-};
-
-/// ntruprimentrulpr653 KEM
-pub static NTRUPRIMENTRULPR653: KemAlgorithm = KemAlgorithm {
-    public_key_alg_id: NTRUPRIMENTRULPR653_ID,
-    kem: oqs::kem::Algorithm::NtruPrimeNtrulpr653,
-};
-
-const NTRUPRIMENTRULPR761_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-ntruprimentrulpr761.der")),
-};
-
-/// ntruprimentrulpr761 KEM
-pub static NTRUPRIMENTRULPR761: KemAlgorithm = KemAlgorithm {
-    public_key_alg_id: NTRUPRIMENTRULPR761_ID,
-    kem: oqs::kem::Algorithm::NtruPrimeNtrulpr761,
-};
-
-const NTRUPRIMENTRULPR857_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-ntruprimentrulpr857.der")),
-};
-
-/// ntruprimentrulpr857 KEM
-pub static NTRUPRIMENTRULPR857: KemAlgorithm = KemAlgorithm {
-    public_key_alg_id: NTRUPRIMENTRULPR857_ID,
-    kem: oqs::kem::Algorithm::NtruPrimeNtrulpr857,
-};
-
-const NTRUPRIMESNTRUP653_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-ntruprimesntrup653.der")),
-};
-
-/// ntruprimesntrup653 KEM
-pub static NTRUPRIMESNTRUP653: KemAlgorithm = KemAlgorithm {
-    public_key_alg_id: NTRUPRIMESNTRUP653_ID,
-    kem: oqs::kem::Algorithm::NtruPrimeSntrup653,
-};
-
 const NTRUPRIMESNTRUP761_ID: AlgorithmIdentifier = AlgorithmIdentifier {
     asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-ntruprimesntrup761.der")),
 };
@@ -247,16 +137,6 @@ const NTRUPRIMESNTRUP761_ID: AlgorithmIdentifier = AlgorithmIdentifier {
 pub static NTRUPRIMESNTRUP761: KemAlgorithm = KemAlgorithm {
     public_key_alg_id: NTRUPRIMESNTRUP761_ID,
     kem: oqs::kem::Algorithm::NtruPrimeSntrup761,
-};
-
-const NTRUPRIMESNTRUP857_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-ntruprimesntrup857.der")),
-};
-
-/// ntruprimesntrup857 KEM
-pub static NTRUPRIMESNTRUP857: KemAlgorithm = KemAlgorithm {
-    public_key_alg_id: NTRUPRIMESNTRUP857_ID,
-    kem: oqs::kem::Algorithm::NtruPrimeSntrup857,
 };
 
 const FRODOKEM640AES_ID: AlgorithmIdentifier = AlgorithmIdentifier {

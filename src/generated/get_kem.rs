@@ -51,56 +51,8 @@
             return Ok(&CLASSICMCELIECE8192128F);
         } else 
 
-        if check_key_id(&LIGHTSABER, algorithm_id) {
-            return Ok(&LIGHTSABER);
-        } else 
-
-        if check_key_id(&SABER, algorithm_id) {
-            return Ok(&SABER);
-        } else 
-
-        if check_key_id(&FIRESABER, algorithm_id) {
-            return Ok(&FIRESABER);
-        } else 
-
-        if check_key_id(&NTRUHPS2048509, algorithm_id) {
-            return Ok(&NTRUHPS2048509);
-        } else 
-
-        if check_key_id(&NTRUHPS2048677, algorithm_id) {
-            return Ok(&NTRUHPS2048677);
-        } else 
-
-        if check_key_id(&NTRUHPS4096821, algorithm_id) {
-            return Ok(&NTRUHPS4096821);
-        } else 
-
-        if check_key_id(&NTRUHRSS701, algorithm_id) {
-            return Ok(&NTRUHRSS701);
-        } else 
-
-        if check_key_id(&NTRUPRIMENTRULPR653, algorithm_id) {
-            return Ok(&NTRUPRIMENTRULPR653);
-        } else 
-
-        if check_key_id(&NTRUPRIMENTRULPR761, algorithm_id) {
-            return Ok(&NTRUPRIMENTRULPR761);
-        } else 
-
-        if check_key_id(&NTRUPRIMENTRULPR857, algorithm_id) {
-            return Ok(&NTRUPRIMENTRULPR857);
-        } else 
-
-        if check_key_id(&NTRUPRIMESNTRUP653, algorithm_id) {
-            return Ok(&NTRUPRIMESNTRUP653);
-        } else 
-
         if check_key_id(&NTRUPRIMESNTRUP761, algorithm_id) {
             return Ok(&NTRUPRIMESNTRUP761);
-        } else 
-
-        if check_key_id(&NTRUPRIMESNTRUP857, algorithm_id) {
-            return Ok(&NTRUPRIMESNTRUP857);
         } else 
 
         if check_key_id(&FRODOKEM640AES, algorithm_id) {

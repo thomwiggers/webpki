@@ -54,105 +54,6 @@ pub static FALCON1024: SignatureAlgorithm = SignatureAlgorithm {
     verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::Falcon1024),
 };
 
-const RAINBOWICLASSIC_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-rainbowiclassic.der")),
-};
-
-/// rainbowiclassic signatures
-pub static RAINBOWICLASSIC: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: RAINBOWICLASSIC_ID,
-    signature_alg_id: RAINBOWICLASSIC_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::RainbowIClassic),
-};
-
-const RAINBOWICIRCUMZENITHAL_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-rainbowicircumzenithal.der")),
-};
-
-/// rainbowicircumzenithal signatures
-pub static RAINBOWICIRCUMZENITHAL: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: RAINBOWICIRCUMZENITHAL_ID,
-    signature_alg_id: RAINBOWICIRCUMZENITHAL_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::RainbowICircumzenithal),
-};
-
-const RAINBOWICOMPRESSED_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-rainbowicompressed.der")),
-};
-
-/// rainbowicompressed signatures
-pub static RAINBOWICOMPRESSED: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: RAINBOWICOMPRESSED_ID,
-    signature_alg_id: RAINBOWICOMPRESSED_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::RainbowICompressed),
-};
-
-const RAINBOWIIICLASSIC_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-rainbowiiiclassic.der")),
-};
-
-/// rainbowiiiclassic signatures
-pub static RAINBOWIIICLASSIC: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: RAINBOWIIICLASSIC_ID,
-    signature_alg_id: RAINBOWIIICLASSIC_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::RainbowIiiClassic),
-};
-
-const RAINBOWIIICIRCUMZENITHAL_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-rainbowiiicircumzenithal.der")),
-};
-
-/// rainbowiiicircumzenithal signatures
-pub static RAINBOWIIICIRCUMZENITHAL: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: RAINBOWIIICIRCUMZENITHAL_ID,
-    signature_alg_id: RAINBOWIIICIRCUMZENITHAL_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::RainbowIiiCircumzenithal),
-};
-
-const RAINBOWIIICOMPRESSED_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-rainbowiiicompressed.der")),
-};
-
-/// rainbowiiicompressed signatures
-pub static RAINBOWIIICOMPRESSED: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: RAINBOWIIICOMPRESSED_ID,
-    signature_alg_id: RAINBOWIIICOMPRESSED_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::RainbowIiiCompressed),
-};
-
-const RAINBOWVCLASSIC_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-rainbowvclassic.der")),
-};
-
-/// rainbowvclassic signatures
-pub static RAINBOWVCLASSIC: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: RAINBOWVCLASSIC_ID,
-    signature_alg_id: RAINBOWVCLASSIC_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::RainbowVClassic),
-};
-
-const RAINBOWVCIRCUMZENITHAL_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-rainbowvcircumzenithal.der")),
-};
-
-/// rainbowvcircumzenithal signatures
-pub static RAINBOWVCIRCUMZENITHAL: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: RAINBOWVCIRCUMZENITHAL_ID,
-    signature_alg_id: RAINBOWVCIRCUMZENITHAL_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::RainbowVCircumzenithal),
-};
-
-const RAINBOWVCOMPRESSED_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-rainbowvcompressed.der")),
-};
-
-/// rainbowvcompressed signatures
-pub static RAINBOWVCOMPRESSED: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: RAINBOWVCOMPRESSED_ID,
-    signature_alg_id: RAINBOWVCOMPRESSED_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::RainbowVCompressed),
-};
-
 const SPHINCSHARAKA128FSIMPLE_ID: AlgorithmIdentifier = AlgorithmIdentifier {
     asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincsharaka128fsimple.der")),
 };
@@ -285,266 +186,310 @@ pub static SPHINCSHARAKA256SROBUST: SignatureAlgorithm = SignatureAlgorithm {
     verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsHaraka256sRobust),
 };
 
-const SPHINCSSHA256128FSIMPLE_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincssha256128fsimple.der")),
+const SPHINCSSHA2128FSIMPLE_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincssha2128fsimple.der")),
 };
 
-/// sphincssha256128fsimple signatures
-pub static SPHINCSSHA256128FSIMPLE: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: SPHINCSSHA256128FSIMPLE_ID,
-    signature_alg_id: SPHINCSSHA256128FSIMPLE_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsSha256128fSimple),
+/// sphincssha2128fsimple signatures
+pub static SPHINCSSHA2128FSIMPLE: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: SPHINCSSHA2128FSIMPLE_ID,
+    signature_alg_id: SPHINCSSHA2128FSIMPLE_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsSha2128fSimple),
 };
 
-const SPHINCSSHA256128FROBUST_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincssha256128frobust.der")),
+const SPHINCSSHA2128FROBUST_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincssha2128frobust.der")),
 };
 
-/// sphincssha256128frobust signatures
-pub static SPHINCSSHA256128FROBUST: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: SPHINCSSHA256128FROBUST_ID,
-    signature_alg_id: SPHINCSSHA256128FROBUST_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsSha256128fRobust),
+/// sphincssha2128frobust signatures
+pub static SPHINCSSHA2128FROBUST: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: SPHINCSSHA2128FROBUST_ID,
+    signature_alg_id: SPHINCSSHA2128FROBUST_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsSha2128fRobust),
 };
 
-const SPHINCSSHA256128SSIMPLE_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincssha256128ssimple.der")),
+const SPHINCSSHA2128SSIMPLE_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincssha2128ssimple.der")),
 };
 
-/// sphincssha256128ssimple signatures
-pub static SPHINCSSHA256128SSIMPLE: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: SPHINCSSHA256128SSIMPLE_ID,
-    signature_alg_id: SPHINCSSHA256128SSIMPLE_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsSha256128sSimple),
+/// sphincssha2128ssimple signatures
+pub static SPHINCSSHA2128SSIMPLE: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: SPHINCSSHA2128SSIMPLE_ID,
+    signature_alg_id: SPHINCSSHA2128SSIMPLE_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsSha2128sSimple),
 };
 
-const SPHINCSSHA256128SROBUST_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincssha256128srobust.der")),
+const SPHINCSSHA2128SROBUST_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincssha2128srobust.der")),
 };
 
-/// sphincssha256128srobust signatures
-pub static SPHINCSSHA256128SROBUST: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: SPHINCSSHA256128SROBUST_ID,
-    signature_alg_id: SPHINCSSHA256128SROBUST_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsSha256128sRobust),
+/// sphincssha2128srobust signatures
+pub static SPHINCSSHA2128SROBUST: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: SPHINCSSHA2128SROBUST_ID,
+    signature_alg_id: SPHINCSSHA2128SROBUST_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsSha2128sRobust),
 };
 
-const SPHINCSSHA256192FSIMPLE_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincssha256192fsimple.der")),
+const SPHINCSSHA2192FSIMPLE_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincssha2192fsimple.der")),
 };
 
-/// sphincssha256192fsimple signatures
-pub static SPHINCSSHA256192FSIMPLE: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: SPHINCSSHA256192FSIMPLE_ID,
-    signature_alg_id: SPHINCSSHA256192FSIMPLE_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsSha256192fSimple),
+/// sphincssha2192fsimple signatures
+pub static SPHINCSSHA2192FSIMPLE: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: SPHINCSSHA2192FSIMPLE_ID,
+    signature_alg_id: SPHINCSSHA2192FSIMPLE_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsSha2192fSimple),
 };
 
-const SPHINCSSHA256192FROBUST_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincssha256192frobust.der")),
+const SPHINCSSHA2192FROBUST_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincssha2192frobust.der")),
 };
 
-/// sphincssha256192frobust signatures
-pub static SPHINCSSHA256192FROBUST: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: SPHINCSSHA256192FROBUST_ID,
-    signature_alg_id: SPHINCSSHA256192FROBUST_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsSha256192fRobust),
+/// sphincssha2192frobust signatures
+pub static SPHINCSSHA2192FROBUST: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: SPHINCSSHA2192FROBUST_ID,
+    signature_alg_id: SPHINCSSHA2192FROBUST_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsSha2192fRobust),
 };
 
-const SPHINCSSHA256192SSIMPLE_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincssha256192ssimple.der")),
+const SPHINCSSHA2192SSIMPLE_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincssha2192ssimple.der")),
 };
 
-/// sphincssha256192ssimple signatures
-pub static SPHINCSSHA256192SSIMPLE: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: SPHINCSSHA256192SSIMPLE_ID,
-    signature_alg_id: SPHINCSSHA256192SSIMPLE_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsSha256192sSimple),
+/// sphincssha2192ssimple signatures
+pub static SPHINCSSHA2192SSIMPLE: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: SPHINCSSHA2192SSIMPLE_ID,
+    signature_alg_id: SPHINCSSHA2192SSIMPLE_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsSha2192sSimple),
 };
 
-const SPHINCSSHA256192SROBUST_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincssha256192srobust.der")),
+const SPHINCSSHA2192SROBUST_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincssha2192srobust.der")),
 };
 
-/// sphincssha256192srobust signatures
-pub static SPHINCSSHA256192SROBUST: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: SPHINCSSHA256192SROBUST_ID,
-    signature_alg_id: SPHINCSSHA256192SROBUST_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsSha256192sRobust),
+/// sphincssha2192srobust signatures
+pub static SPHINCSSHA2192SROBUST: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: SPHINCSSHA2192SROBUST_ID,
+    signature_alg_id: SPHINCSSHA2192SROBUST_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsSha2192sRobust),
 };
 
-const SPHINCSSHA256256FSIMPLE_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincssha256256fsimple.der")),
+const SPHINCSSHA2256FSIMPLE_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincssha2256fsimple.der")),
 };
 
-/// sphincssha256256fsimple signatures
-pub static SPHINCSSHA256256FSIMPLE: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: SPHINCSSHA256256FSIMPLE_ID,
-    signature_alg_id: SPHINCSSHA256256FSIMPLE_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsSha256256fSimple),
+/// sphincssha2256fsimple signatures
+pub static SPHINCSSHA2256FSIMPLE: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: SPHINCSSHA2256FSIMPLE_ID,
+    signature_alg_id: SPHINCSSHA2256FSIMPLE_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsSha2256fSimple),
 };
 
-const SPHINCSSHA256256FROBUST_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincssha256256frobust.der")),
+const SPHINCSSHA2256FROBUST_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincssha2256frobust.der")),
 };
 
-/// sphincssha256256frobust signatures
-pub static SPHINCSSHA256256FROBUST: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: SPHINCSSHA256256FROBUST_ID,
-    signature_alg_id: SPHINCSSHA256256FROBUST_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsSha256256fRobust),
+/// sphincssha2256frobust signatures
+pub static SPHINCSSHA2256FROBUST: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: SPHINCSSHA2256FROBUST_ID,
+    signature_alg_id: SPHINCSSHA2256FROBUST_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsSha2256fRobust),
 };
 
-const SPHINCSSHA256256SSIMPLE_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincssha256256ssimple.der")),
+const SPHINCSSHA2256SSIMPLE_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincssha2256ssimple.der")),
 };
 
-/// sphincssha256256ssimple signatures
-pub static SPHINCSSHA256256SSIMPLE: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: SPHINCSSHA256256SSIMPLE_ID,
-    signature_alg_id: SPHINCSSHA256256SSIMPLE_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsSha256256sSimple),
+/// sphincssha2256ssimple signatures
+pub static SPHINCSSHA2256SSIMPLE: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: SPHINCSSHA2256SSIMPLE_ID,
+    signature_alg_id: SPHINCSSHA2256SSIMPLE_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsSha2256sSimple),
 };
 
-const SPHINCSSHA256256SROBUST_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincssha256256srobust.der")),
+const SPHINCSSHA2256SROBUST_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincssha2256srobust.der")),
 };
 
-/// sphincssha256256srobust signatures
-pub static SPHINCSSHA256256SROBUST: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: SPHINCSSHA256256SROBUST_ID,
-    signature_alg_id: SPHINCSSHA256256SROBUST_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsSha256256sRobust),
+/// sphincssha2256srobust signatures
+pub static SPHINCSSHA2256SROBUST: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: SPHINCSSHA2256SROBUST_ID,
+    signature_alg_id: SPHINCSSHA2256SROBUST_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsSha2256sRobust),
 };
 
-const SPHINCSSHAKE256128FSIMPLE_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincsshake256128fsimple.der")),
+const SPHINCSSHAKE128FSIMPLE_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincsshake128fsimple.der")),
 };
 
-/// sphincsshake256128fsimple signatures
-pub static SPHINCSSHAKE256128FSIMPLE: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: SPHINCSSHAKE256128FSIMPLE_ID,
-    signature_alg_id: SPHINCSSHAKE256128FSIMPLE_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsShake256128fSimple),
+/// sphincsshake128fsimple signatures
+pub static SPHINCSSHAKE128FSIMPLE: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: SPHINCSSHAKE128FSIMPLE_ID,
+    signature_alg_id: SPHINCSSHAKE128FSIMPLE_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsShake128fSimple),
 };
 
-const SPHINCSSHAKE256128FROBUST_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincsshake256128frobust.der")),
+const SPHINCSSHAKE128FROBUST_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincsshake128frobust.der")),
 };
 
-/// sphincsshake256128frobust signatures
-pub static SPHINCSSHAKE256128FROBUST: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: SPHINCSSHAKE256128FROBUST_ID,
-    signature_alg_id: SPHINCSSHAKE256128FROBUST_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsShake256128fRobust),
+/// sphincsshake128frobust signatures
+pub static SPHINCSSHAKE128FROBUST: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: SPHINCSSHAKE128FROBUST_ID,
+    signature_alg_id: SPHINCSSHAKE128FROBUST_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsShake128fRobust),
 };
 
-const SPHINCSSHAKE256128SSIMPLE_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincsshake256128ssimple.der")),
+const SPHINCSSHAKE128SSIMPLE_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincsshake128ssimple.der")),
 };
 
-/// sphincsshake256128ssimple signatures
-pub static SPHINCSSHAKE256128SSIMPLE: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: SPHINCSSHAKE256128SSIMPLE_ID,
-    signature_alg_id: SPHINCSSHAKE256128SSIMPLE_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsShake256128sSimple),
+/// sphincsshake128ssimple signatures
+pub static SPHINCSSHAKE128SSIMPLE: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: SPHINCSSHAKE128SSIMPLE_ID,
+    signature_alg_id: SPHINCSSHAKE128SSIMPLE_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsShake128sSimple),
 };
 
-const SPHINCSSHAKE256128SROBUST_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincsshake256128srobust.der")),
+const SPHINCSSHAKE128SROBUST_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincsshake128srobust.der")),
 };
 
-/// sphincsshake256128srobust signatures
-pub static SPHINCSSHAKE256128SROBUST: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: SPHINCSSHAKE256128SROBUST_ID,
-    signature_alg_id: SPHINCSSHAKE256128SROBUST_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsShake256128sRobust),
+/// sphincsshake128srobust signatures
+pub static SPHINCSSHAKE128SROBUST: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: SPHINCSSHAKE128SROBUST_ID,
+    signature_alg_id: SPHINCSSHAKE128SROBUST_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsShake128sRobust),
 };
 
-const SPHINCSSHAKE256192FSIMPLE_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincsshake256192fsimple.der")),
+const SPHINCSSHAKE192FSIMPLE_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincsshake192fsimple.der")),
 };
 
-/// sphincsshake256192fsimple signatures
-pub static SPHINCSSHAKE256192FSIMPLE: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: SPHINCSSHAKE256192FSIMPLE_ID,
-    signature_alg_id: SPHINCSSHAKE256192FSIMPLE_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsShake256192fSimple),
+/// sphincsshake192fsimple signatures
+pub static SPHINCSSHAKE192FSIMPLE: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: SPHINCSSHAKE192FSIMPLE_ID,
+    signature_alg_id: SPHINCSSHAKE192FSIMPLE_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsShake192fSimple),
 };
 
-const SPHINCSSHAKE256192FROBUST_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincsshake256192frobust.der")),
+const SPHINCSSHAKE192FROBUST_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincsshake192frobust.der")),
 };
 
-/// sphincsshake256192frobust signatures
-pub static SPHINCSSHAKE256192FROBUST: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: SPHINCSSHAKE256192FROBUST_ID,
-    signature_alg_id: SPHINCSSHAKE256192FROBUST_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsShake256192fRobust),
+/// sphincsshake192frobust signatures
+pub static SPHINCSSHAKE192FROBUST: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: SPHINCSSHAKE192FROBUST_ID,
+    signature_alg_id: SPHINCSSHAKE192FROBUST_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsShake192fRobust),
 };
 
-const SPHINCSSHAKE256192SSIMPLE_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincsshake256192ssimple.der")),
+const SPHINCSSHAKE192SSIMPLE_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincsshake192ssimple.der")),
 };
 
-/// sphincsshake256192ssimple signatures
-pub static SPHINCSSHAKE256192SSIMPLE: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: SPHINCSSHAKE256192SSIMPLE_ID,
-    signature_alg_id: SPHINCSSHAKE256192SSIMPLE_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsShake256192sSimple),
+/// sphincsshake192ssimple signatures
+pub static SPHINCSSHAKE192SSIMPLE: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: SPHINCSSHAKE192SSIMPLE_ID,
+    signature_alg_id: SPHINCSSHAKE192SSIMPLE_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsShake192sSimple),
 };
 
-const SPHINCSSHAKE256192SROBUST_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincsshake256192srobust.der")),
+const SPHINCSSHAKE192SROBUST_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincsshake192srobust.der")),
 };
 
-/// sphincsshake256192srobust signatures
-pub static SPHINCSSHAKE256192SROBUST: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: SPHINCSSHAKE256192SROBUST_ID,
-    signature_alg_id: SPHINCSSHAKE256192SROBUST_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsShake256192sRobust),
+/// sphincsshake192srobust signatures
+pub static SPHINCSSHAKE192SROBUST: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: SPHINCSSHAKE192SROBUST_ID,
+    signature_alg_id: SPHINCSSHAKE192SROBUST_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsShake192sRobust),
 };
 
-const SPHINCSSHAKE256256FSIMPLE_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincsshake256256fsimple.der")),
+const SPHINCSSHAKE256FSIMPLE_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincsshake256fsimple.der")),
 };
 
-/// sphincsshake256256fsimple signatures
-pub static SPHINCSSHAKE256256FSIMPLE: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: SPHINCSSHAKE256256FSIMPLE_ID,
-    signature_alg_id: SPHINCSSHAKE256256FSIMPLE_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsShake256256fSimple),
+/// sphincsshake256fsimple signatures
+pub static SPHINCSSHAKE256FSIMPLE: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: SPHINCSSHAKE256FSIMPLE_ID,
+    signature_alg_id: SPHINCSSHAKE256FSIMPLE_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsShake256fSimple),
 };
 
-const SPHINCSSHAKE256256FROBUST_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincsshake256256frobust.der")),
+const SPHINCSSHAKE256FROBUST_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincsshake256frobust.der")),
 };
 
-/// sphincsshake256256frobust signatures
-pub static SPHINCSSHAKE256256FROBUST: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: SPHINCSSHAKE256256FROBUST_ID,
-    signature_alg_id: SPHINCSSHAKE256256FROBUST_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsShake256256fRobust),
+/// sphincsshake256frobust signatures
+pub static SPHINCSSHAKE256FROBUST: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: SPHINCSSHAKE256FROBUST_ID,
+    signature_alg_id: SPHINCSSHAKE256FROBUST_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsShake256fRobust),
 };
 
-const SPHINCSSHAKE256256SSIMPLE_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincsshake256256ssimple.der")),
+const SPHINCSSHAKE256SSIMPLE_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincsshake256ssimple.der")),
 };
 
-/// sphincsshake256256ssimple signatures
-pub static SPHINCSSHAKE256256SSIMPLE: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: SPHINCSSHAKE256256SSIMPLE_ID,
-    signature_alg_id: SPHINCSSHAKE256256SSIMPLE_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsShake256256sSimple),
+/// sphincsshake256ssimple signatures
+pub static SPHINCSSHAKE256SSIMPLE: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: SPHINCSSHAKE256SSIMPLE_ID,
+    signature_alg_id: SPHINCSSHAKE256SSIMPLE_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsShake256sSimple),
 };
 
-const SPHINCSSHAKE256256SROBUST_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincsshake256256srobust.der")),
+const SPHINCSSHAKE256SROBUST_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-sphincsshake256srobust.der")),
 };
 
-/// sphincsshake256256srobust signatures
-pub static SPHINCSSHAKE256256SROBUST: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: SPHINCSSHAKE256256SROBUST_ID,
-    signature_alg_id: SPHINCSSHAKE256256SROBUST_ID,
-    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsShake256256sRobust),
+/// sphincsshake256srobust signatures
+pub static SPHINCSSHAKE256SROBUST: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: SPHINCSSHAKE256SROBUST_ID,
+    signature_alg_id: SPHINCSSHAKE256SROBUST_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::SphincsShake256sRobust),
+};
+
+const PQOV1616064CLASSIC_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-pqov1616064classic.der")),
+};
+
+/// pqov1616064classic signatures
+pub static PQOV1616064CLASSIC: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: PQOV1616064CLASSIC_ID,
+    signature_alg_id: PQOV1616064CLASSIC_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::Pqov1616064Classic),
+};
+
+const PQOV25611244CLASSIC_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-pqov25611244classic.der")),
+};
+
+/// pqov25611244classic signatures
+pub static PQOV25611244CLASSIC: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: PQOV25611244CLASSIC_ID,
+    signature_alg_id: PQOV25611244CLASSIC_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::Pqov25611244Classic),
+};
+
+const PQOV25618472CLASSIC_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-pqov25618472classic.der")),
+};
+
+/// pqov25618472classic signatures
+pub static PQOV25618472CLASSIC: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: PQOV25618472CLASSIC_ID,
+    signature_alg_id: PQOV25618472CLASSIC_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::Pqov25618472Classic),
+};
+
+const PQOV25624496CLASSIC_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-pqov25624496classic.der")),
+};
+
+/// pqov25624496classic signatures
+pub static PQOV25624496CLASSIC: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: PQOV25624496CLASSIC_ID,
+    signature_alg_id: PQOV25624496CLASSIC_ID,
+    verification_alg: VerificationAlgorithm::Oqs(&oqs::sig::Algorithm::Pqov25624496Classic),
 };

@@ -82,7 +82,7 @@ with open('generated/get_kem.rs', 'w') as fh:
 """)
 
 for alg in nikes:
-    input_str = f"OBJECT_IDENTIFIER {{ {get_oid(alg)} }}\n"
+    input_str = f"OBJECT_IDENTIFIER {{ {get_oid(alg.lower())} }}\n"
 
     subprocess.run(
         ["../../mk-cert/ascii2der", "-o", f"data/alg-{alg}.der"],
