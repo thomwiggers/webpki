@@ -43,4 +43,6 @@ pub use signed_data::PQOV1616064CLASSIC;
 pub use signed_data::PQOV25611244CLASSIC;
 pub use signed_data::PQOV25618472CLASSIC;
 pub use signed_data::PQOV25624496CLASSIC;
-pub use signed_data::XMSS;
+pub use signed_data::XMSS1;
+pub use signed_data::XMSS3;
+pub use signed_data::XMSS5;

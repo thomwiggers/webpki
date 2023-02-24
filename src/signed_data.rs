@@ -60,7 +60,7 @@ pub struct SignedData<'a> {
 ///     certs [0] EXPLICIT SEQUENCE OF Certificate OPTIONAL
 /// }
 /// ```
-/// 
+///
 /// Note that this function does NOT parse the outermost `SEQUENCE` or the
 /// `certs` value.
 ///
@@ -173,8 +173,14 @@ pub(crate) fn verify_signature(
                 .verify(msg.as_slice_less_safe(), signature, pk)
                 .map_err(|_| Error::InvalidSignatureForPublicKey)
         },
-        VerificationAlgorithm::Xmss => {
-            use xmss_rs::verify;
+        VerificationAlgorithm::Xmss(level) => {
+            let verify = match level {
+                1 => xmss_rs::level1::verify,
+                3 => xmss_rs::level3::verify,
+                5 => xmss_rs::level5::verify,
+                _ => unreachable!("Invalid XMSS variant"),
+            };
+
             if verify(msg.as_slice_less_safe(), signature.as_slice_less_safe(), spki.key_value.as_slice_less_safe()) {
                 Ok(())
             } else {
@@ -207,7 +213,7 @@ pub(crate) fn parse_spki_value(input: untrusted::Input) -> Result<SubjectPublicK
 enum VerificationAlgorithm {
     Ring(&'static dyn signature::VerificationAlgorithm),
     Oqs(&'static oqs::sig::Algorithm),
-    Xmss,
+    Xmss(u8),
 }
 
 /// A signature algorithm.
@@ -367,17 +373,34 @@ const ED_25519: AlgorithmIdentifier = AlgorithmIdentifier {
 include!("generated/oqs_sigschemes.rs");
 
 
-const XMSS_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("data/alg-xmss.der")),
+const XMSS1_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("data/alg-xmss1.der")),
+};
+const XMSS3_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("data/alg-xmss3.der")),
+};
+const XMSS5_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("data/alg-xmss5.der")),
 };
 
 /// xmss signatures
-pub static XMSS: SignatureAlgorithm = SignatureAlgorithm {
-    public_key_alg_id: XMSS_ID,
-    signature_alg_id: XMSS_ID,
-    verification_alg: VerificationAlgorithm::Xmss,
+pub static XMSS1: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: XMSS1_ID,
+    signature_alg_id: XMSS1_ID,
+    verification_alg: VerificationAlgorithm::Xmss(1),
 };
-
+/// XMSS 3 signature
+pub static XMSS3: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: XMSS3_ID,
+    signature_alg_id: XMSS3_ID,
+    verification_alg: VerificationAlgorithm::Xmss(1),
+};
+/// XMSS 5 signature
+pub static XMSS5: SignatureAlgorithm = SignatureAlgorithm {
+    public_key_alg_id: XMSS5_ID,
+    signature_alg_id: XMSS5_ID,
+    verification_alg: VerificationAlgorithm::Xmss(5),
+};
 
 #[cfg(test)]
 mod tests {

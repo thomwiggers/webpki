@@ -29,7 +29,7 @@ for alg, oqsalg in signs:
 
 with open('generated/oqs_sigschemes.rs', 'w') as fh:
     for alg, oqsalg in signs:
-        if alg == "xmss":
+        if alg.startswith("xmss"):
             continue
         fh.write(f"""
 const {alg.upper()}_ID: AlgorithmIdentifier = AlgorithmIdentifier {{
