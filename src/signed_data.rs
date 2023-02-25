@@ -393,7 +393,7 @@ pub static XMSS1: SignatureAlgorithm = SignatureAlgorithm {
 pub static XMSS3: SignatureAlgorithm = SignatureAlgorithm {
     public_key_alg_id: XMSS3_ID,
     signature_alg_id: XMSS3_ID,
-    verification_alg: VerificationAlgorithm::Xmss(1),
+    verification_alg: VerificationAlgorithm::Xmss(3),
 };
 /// XMSS 5 signature
 pub static XMSS5: SignatureAlgorithm = SignatureAlgorithm {
