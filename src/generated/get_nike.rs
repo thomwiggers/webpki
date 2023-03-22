@@ -1,4 +1,12 @@
 
+        if check_key_id(&CTIDH512, algorithm_id) {
+            return Ok(&CTIDH512);
+        } else 
+
+        if check_key_id(&CTIDH1024, algorithm_id) {
+            return Ok(&CTIDH1024);
+        } else 
+
         if check_key_id(&CSIDH2047K221, algorithm_id) {
             return Ok(&CSIDH2047K221);
         } else 

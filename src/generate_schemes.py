@@ -94,16 +94,27 @@ for alg in nikes:
 
 with open('generated/nikes.rs', 'w') as fh:
     for alg in nikes:
-        algid = alg.replace("csidh", "CSIDH")
         fh.write(f"""
 const {alg.upper()}_ID: AlgorithmIdentifier = AlgorithmIdentifier {{
     asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-{alg}.der")),
 }};
+""")
+        if not alg.startswith("ctidh"):
+            algid = alg.replace("csidh", "CSIDH")
+            fh.write(f"""
 
 /// {alg} NIKE
 pub static {alg.upper()}: NikeAlgorithm = NikeAlgorithm {{
     public_key_alg_id: {alg.upper()}_ID,
-    alg: secsidh::Algorithm::{algid},
+    alg: NikeImpl::SecSidh(secsidh::Algorithm::{algid}),
+}};
+""")
+        else:
+            fh.write(f"""
+/// {alg} NIKE
+pub static {alg.upper()}: NikeAlgorithm = NikeAlgorithm {{
+    public_key_alg_id: {alg.upper()}_ID,
+    alg: NikeImpl::Ctidh(CtidhAlg::{alg}),
 }};
 """)
 
