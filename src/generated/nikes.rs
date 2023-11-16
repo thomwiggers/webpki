@@ -19,134 +19,134 @@ pub static CTIDH1024: NikeAlgorithm = NikeAlgorithm {
     alg: NikeImpl::Ctidh(CtidhAlg::ctidh1024),
 };
 
-const CSIDH2047K221_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-CSIDH2047k221.der")),
+const CSIDH2047M1L226_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-CSIDH2047m1l226.der")),
 };
 
 
-/// CSIDH2047k221 NIKE
-pub static CSIDH2047K221: NikeAlgorithm = NikeAlgorithm {
-    public_key_alg_id: CSIDH2047K221_ID,
-    alg: NikeImpl::SecSidh(secsidh::Algorithm::CSIDH2047k221),
+/// CSIDH2047m1l226 NIKE
+pub static CSIDH2047M1L226: NikeAlgorithm = NikeAlgorithm {
+    public_key_alg_id: CSIDH2047M1L226_ID,
+    alg: NikeImpl::SecSidh(secsidh::Algorithm::CSIDH2047m1l226),
 };
 
-const CSIDH4095K256_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-CSIDH4095k256.der")),
-};
-
-
-/// CSIDH4095k256 NIKE
-pub static CSIDH4095K256: NikeAlgorithm = NikeAlgorithm {
-    public_key_alg_id: CSIDH4095K256_ID,
-    alg: NikeImpl::SecSidh(secsidh::Algorithm::CSIDH4095k256),
-};
-
-const CSIDH5119K234_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-CSIDH5119k234.der")),
+const CSIDH4095M27L262_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-CSIDH4095m27l262.der")),
 };
 
 
-/// CSIDH5119k234 NIKE
-pub static CSIDH5119K234: NikeAlgorithm = NikeAlgorithm {
-    public_key_alg_id: CSIDH5119K234_ID,
-    alg: NikeImpl::SecSidh(secsidh::Algorithm::CSIDH5119k234),
+/// CSIDH4095m27l262 NIKE
+pub static CSIDH4095M27L262: NikeAlgorithm = NikeAlgorithm {
+    public_key_alg_id: CSIDH4095M27L262_ID,
+    alg: NikeImpl::SecSidh(secsidh::Algorithm::CSIDH4095m27l262),
 };
 
-const CSIDH6143K256_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-CSIDH6143k256.der")),
-};
-
-
-/// CSIDH6143k256 NIKE
-pub static CSIDH6143K256: NikeAlgorithm = NikeAlgorithm {
-    public_key_alg_id: CSIDH6143K256_ID,
-    alg: NikeImpl::SecSidh(secsidh::Algorithm::CSIDH6143k256),
-};
-
-const CSIDH8191K332_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-CSIDH8191k332.der")),
+const CSIDH5119M46L244_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-CSIDH5119m46l244.der")),
 };
 
 
-/// CSIDH8191k332 NIKE
-pub static CSIDH8191K332: NikeAlgorithm = NikeAlgorithm {
-    public_key_alg_id: CSIDH8191K332_ID,
-    alg: NikeImpl::SecSidh(secsidh::Algorithm::CSIDH8191k332),
+/// CSIDH5119m46l244 NIKE
+pub static CSIDH5119M46L244: NikeAlgorithm = NikeAlgorithm {
+    public_key_alg_id: CSIDH5119M46L244_ID,
+    alg: NikeImpl::SecSidh(secsidh::Algorithm::CSIDH5119m46l244),
 };
 
-const CSIDH9215K384_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-CSIDH9215k384.der")),
-};
-
-
-/// CSIDH9215k384 NIKE
-pub static CSIDH9215K384: NikeAlgorithm = NikeAlgorithm {
-    public_key_alg_id: CSIDH9215K384_ID,
-    alg: NikeImpl::SecSidh(secsidh::Algorithm::CSIDH9215k384),
-};
-
-const CTIDH2047K221_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-CTIDH2047k221.der")),
+const CSIDH6143M59L262_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-CSIDH6143m59l262.der")),
 };
 
 
-/// CTIDH2047k221 NIKE
-pub static CTIDH2047K221: NikeAlgorithm = NikeAlgorithm {
-    public_key_alg_id: CTIDH2047K221_ID,
-    alg: NikeImpl::SecSidh(secsidh::Algorithm::CTIDH2047k221),
+/// CSIDH6143m59l262 NIKE
+pub static CSIDH6143M59L262: NikeAlgorithm = NikeAlgorithm {
+    public_key_alg_id: CSIDH6143M59L262_ID,
+    alg: NikeImpl::SecSidh(secsidh::Algorithm::CSIDH6143m59l262),
 };
 
-const CTIDH4095K256_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-CTIDH4095k256.der")),
-};
-
-
-/// CTIDH4095k256 NIKE
-pub static CTIDH4095K256: NikeAlgorithm = NikeAlgorithm {
-    public_key_alg_id: CTIDH4095K256_ID,
-    alg: NikeImpl::SecSidh(secsidh::Algorithm::CTIDH4095k256),
-};
-
-const CTIDH5119K234_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-CTIDH5119k234.der")),
+const CSIDH8191M78L338_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-CSIDH8191m78l338.der")),
 };
 
 
-/// CTIDH5119k234 NIKE
-pub static CTIDH5119K234: NikeAlgorithm = NikeAlgorithm {
-    public_key_alg_id: CTIDH5119K234_ID,
-    alg: NikeImpl::SecSidh(secsidh::Algorithm::CTIDH5119k234),
+/// CSIDH8191m78l338 NIKE
+pub static CSIDH8191M78L338: NikeAlgorithm = NikeAlgorithm {
+    public_key_alg_id: CSIDH8191M78L338_ID,
+    alg: NikeImpl::SecSidh(secsidh::Algorithm::CSIDH8191m78l338),
 };
 
-const CTIDH6143K256_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-CTIDH6143k256.der")),
-};
-
-
-/// CTIDH6143k256 NIKE
-pub static CTIDH6143K256: NikeAlgorithm = NikeAlgorithm {
-    public_key_alg_id: CTIDH6143K256_ID,
-    alg: NikeImpl::SecSidh(secsidh::Algorithm::CTIDH6143k256),
-};
-
-const CTIDH8191K332_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-CTIDH8191k332.der")),
+const CSIDH9215M85L389_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-CSIDH9215m85l389.der")),
 };
 
 
-/// CTIDH8191k332 NIKE
-pub static CTIDH8191K332: NikeAlgorithm = NikeAlgorithm {
-    public_key_alg_id: CTIDH8191K332_ID,
-    alg: NikeImpl::SecSidh(secsidh::Algorithm::CTIDH8191k332),
+/// CSIDH9215m85l389 NIKE
+pub static CSIDH9215M85L389: NikeAlgorithm = NikeAlgorithm {
+    public_key_alg_id: CSIDH9215M85L389_ID,
+    alg: NikeImpl::SecSidh(secsidh::Algorithm::CSIDH9215m85l389),
 };
 
-const CTIDH9215K384_ID: AlgorithmIdentifier = AlgorithmIdentifier {
-    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-CTIDH9215k384.der")),
+const CTIDH2047M1L226_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-CTIDH2047m1l226.der")),
 };
 
 
-/// CTIDH9215k384 NIKE
-pub static CTIDH9215K384: NikeAlgorithm = NikeAlgorithm {
-    public_key_alg_id: CTIDH9215K384_ID,
-    alg: NikeImpl::SecSidh(secsidh::Algorithm::CTIDH9215k384),
+/// CTIDH2047m1l226 NIKE
+pub static CTIDH2047M1L226: NikeAlgorithm = NikeAlgorithm {
+    public_key_alg_id: CTIDH2047M1L226_ID,
+    alg: NikeImpl::SecSidh(secsidh::Algorithm::CTIDH2047m1l226),
+};
+
+const CTIDH4095M27L262_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-CTIDH4095m27l262.der")),
+};
+
+
+/// CTIDH4095m27l262 NIKE
+pub static CTIDH4095M27L262: NikeAlgorithm = NikeAlgorithm {
+    public_key_alg_id: CTIDH4095M27L262_ID,
+    alg: NikeImpl::SecSidh(secsidh::Algorithm::CTIDH4095m27l262),
+};
+
+const CTIDH5119M46L244_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-CTIDH5119m46l244.der")),
+};
+
+
+/// CTIDH5119m46l244 NIKE
+pub static CTIDH5119M46L244: NikeAlgorithm = NikeAlgorithm {
+    public_key_alg_id: CTIDH5119M46L244_ID,
+    alg: NikeImpl::SecSidh(secsidh::Algorithm::CTIDH5119m46l244),
+};
+
+const CTIDH6143M59L262_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-CTIDH6143m59l262.der")),
+};
+
+
+/// CTIDH6143m59l262 NIKE
+pub static CTIDH6143M59L262: NikeAlgorithm = NikeAlgorithm {
+    public_key_alg_id: CTIDH6143M59L262_ID,
+    alg: NikeImpl::SecSidh(secsidh::Algorithm::CTIDH6143m59l262),
+};
+
+const CTIDH8191M78L338_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-CTIDH8191m78l338.der")),
+};
+
+
+/// CTIDH8191m78l338 NIKE
+pub static CTIDH8191M78L338: NikeAlgorithm = NikeAlgorithm {
+    public_key_alg_id: CTIDH8191M78L338_ID,
+    alg: NikeImpl::SecSidh(secsidh::Algorithm::CTIDH8191m78l338),
+};
+
+const CTIDH9215M85L389_ID: AlgorithmIdentifier = AlgorithmIdentifier {
+    asn1_id_value: untrusted::Input::from(include_bytes!("../data/alg-CTIDH9215m85l389.der")),
+};
+
+
+/// CTIDH9215m85l389 NIKE
+pub static CTIDH9215M85L389: NikeAlgorithm = NikeAlgorithm {
+    public_key_alg_id: CTIDH9215M85L389_ID,
+    alg: NikeImpl::SecSidh(secsidh::Algorithm::CTIDH9215m85l389),
 };
